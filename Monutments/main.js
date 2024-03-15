@@ -1,14 +1,8 @@
-let longitude, latitude, destination
+let latitude , longitude , destination;
 
 $(document).ready(function(){
     alert("Please allow the device to know your location!")
     initGeolocation();
-})
-
-$(function () {
-    $("#navigate-button").click(function () {
-        window.location.href = `ar_weather.html?source=${latitude};${longitude}&destination=${destination.lat};${destination.lng}`
-    })
 })
 
 function initGeolocation() {
@@ -20,6 +14,12 @@ function initGeolocation() {
     }
 }
 
+$(function () {
+    $("#navigate-button").click(function () {
+		window.location.href = `ar_weather.html?source=${latitude};${longitude}&destination=${destination[1]};${destination[0]}`
+    })
+})
+
 function success(position){
  longitude = position.coords.longitude;
  latitude = position.coords.latitude;
@@ -30,7 +30,7 @@ function success(position){
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [longitude, latitude],
-    zoom: 10
+    zoom: 4
 })
 
 map.addControl(
@@ -47,7 +47,7 @@ var img1 = document.querySelector("#amber")
 var marker1 = new mapboxgl.Marker({
     element: img1
 })
-    .setLngLat([75.85133, 26.98547])
+    .setLngLat([75.850700, 26.985901])
     .addTo(map);
 
 var img2 = document.querySelector("#gateway")
@@ -55,7 +55,7 @@ var img2 = document.querySelector("#gateway")
 var marker2 = new mapboxgl.Marker({
     element: img2
 })
-    .setLngLat([72.835163, 18.920180])
+    .setLngLat([72.834641, 18.922064])
     .addTo(map);
 
 var img3 = document.querySelector("#gate")
@@ -63,7 +63,7 @@ var img3 = document.querySelector("#gate")
 var marker3 = new mapboxgl.Marker({
     element: img3
 })
-    .setLngLat([77.22931, 28.61495])
+    .setLngLat([77.229446, 28.612894])
     .addTo(map);
 
 var img4 = document.querySelector("#lotus")
@@ -71,7 +71,7 @@ var img4 = document.querySelector("#lotus")
 var marker4 = new mapboxgl.Marker({
     element: img4
 })
-    .setLngLat([77.25880, 28.553501])
+    .setLngLat([77.259132, 28.553558])
     .addTo(map);
 
 var img5 = document.querySelector("#victoria")
@@ -79,7 +79,7 @@ var img5 = document.querySelector("#victoria")
 var marker5 = new mapboxgl.Marker({
     element: img5
 })
-    .setLngLat([88.342785, 22.546170])
+    .setLngLat([88.3426 , 22.5448])
     .addTo(map);
 
 }
