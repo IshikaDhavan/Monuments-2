@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 
-    <title>Monuments</title>
+    <title>Navigation</title>
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -20,10 +20,10 @@
         integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
         crossorigin="anonymous"></script>
 
-    <!-- Mapbox -->
+    <!-- Mapbox API-->
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
-</head>
+
 
 <body>
     <!-- Mapbox Geocoder -->
@@ -41,7 +41,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 text-center p-5">
-                <h1>MONUMENTS</h1>
+                <h1>AR Weather</h1>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 text-center">
                 <div id="map"></div>
@@ -53,6 +53,9 @@
             <img id="gate" class="image-marker" src="./assets/IndiaGate.jpg">
             <img id="amber" class="image-marker" src="./assets/AmberFort.jpeg">
             <img id="victoria" class="image-marker" src="./assets/VictoriaMemorial.jpeg">
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center p-5">
+            <button id="navigate-button">Show Me The Weather!</button>
         </div>
     </div>
 
